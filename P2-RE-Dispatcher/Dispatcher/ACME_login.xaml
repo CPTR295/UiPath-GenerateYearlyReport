@@ -103,13 +103,13 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ACME_login" sap:VirtualizedContainerService.HintSize="1155.2,2428" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ACME_login" sap:VirtualizedContainerService.HintSize="1155.2,2564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="1155.2,2404.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="1155.2,2540.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="username" />
         <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -120,14 +120,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1121.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start ACME Login&quot;]" />
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="in_cred" CacheStrategy="None" DisplayName="Get Credential" FolderPath="reddytushar03@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1121.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]" />
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome ACME System 1 - Log In" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1121.6,1972" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f1738245-4a5d-4a24-9ab9-b77f90b4af55" Version="V2" WindowResize="Maximize">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1121.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[in_cred]" />
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Acme_Cred" CacheStrategy="None" DisplayName="Get Credential" FolderPath="reddytushar03@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1121.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome ACME System 1 - Log In" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1121.6,1933.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f1738245-4a5d-4a24-9ab9-b77f90b4af55" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1088,1692" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1088,1693.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="loginsuceess" />
               </Sequence.Variables>
@@ -140,7 +141,7 @@
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" CVScreenId="8cf168a5-96e7-40c4-af65-4e7935db53f6" ContentHash="5DdJ-yUVDku0c5ocpzL4xg" CvElementArea="334, 593, 608, 47" CvType="InputBox" DesignTimeRectangle="334, 596, 607, 43" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="c06a9421-66fa-4daa-aef4-232c849c1353" InformativeScreenshot="f4a86de3fee07db9c818920e9ee1af2d.png" IsResponsive="True" Reference="tqjUJiP2OUKNqdfpboe8zQ/3nRUyvq6aUy_Kw6aBm8P8Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="8cf168a5-96e7-40c4-af65-4e7935db53f6" CvTextArea="334, 567, 52, 16" CvTextArgument="Email:" CvType="Text" DesignTimeRectangle="334, 565, 53, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email:' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Email:' /&gt;" Guid="d812d2db-bd1c-4d0b-9fdb-f4a5bae59f72" SearchSteps="FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
@@ -161,7 +162,7 @@
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" CVScreenId="1efb91f6-4ba5-4ef9-9307-3e084aeb8c3f" ContentHash="uHcT7Tx6Qkuzp6xA9jLlXA" CvElementArea="333, 687, 609, 44" CvType="InputBox" DesignTimeRectangle="334, 689, 607, 42" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control ' aaname='Password:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4285bee1-c958-45db-829b-24638883f2c9" InformativeScreenshot="954505c7f7d0975fefb3e20912b5de66.png" Reference="tqjUJiP2OUKNqdfpboe8zQ/CnAw2C1MMEyyzfu49O2m8w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="1efb91f6-4ba5-4ef9-9307-3e084aeb8c3f" CvTextArea="332, 659, 90, 17" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="334, 657, 89, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Password:' /&gt;" Guid="bd115d6c-cbe1-458e-971a-76f60fb02eec" SearchSteps="FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
