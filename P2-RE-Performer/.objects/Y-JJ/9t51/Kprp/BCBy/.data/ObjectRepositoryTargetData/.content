@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NAPeW-HaiE6M9W_ABWZ7dQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="460144b4-cf1e-4b5c-b04d-e6245242caad" CvElementArea="1420, 882, 110, 33" CvTextArea="1458, 891, 33, 13" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="1421, 883, 110, 33" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="abcb3bdc-94d0-45dd-9476-9461b1a23445" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="946a126c3fd85183544dd0156544527d.png" xmlns="">0yyX3qfAe60aeAhwQmmlRyw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "October",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "nMFgo39AIUCag-Y2vzfdIg",
+  "Reference": "iToxreOIsECE32DNwzeZzw/nMFgo39AIUCag-Y2vzfdIg",
+  "ParentRef": "iToxreOIsECE32DNwzeZzw/URO_zZjo3UCT9PNvzvcIOw",
+  "Created": "2026-01-03T16:04:26.1437597Z",
+  "Updated": "2026-01-03T16:04:26.1437597Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

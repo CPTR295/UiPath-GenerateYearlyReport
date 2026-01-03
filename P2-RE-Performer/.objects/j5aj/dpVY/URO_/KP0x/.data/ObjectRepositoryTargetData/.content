@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="a6dqo2lXl0SQzA3Dy3VoIQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="a5ab0abb-66fd-410b-bf67-070e2420d276" CvElementArea="332, 780, 171, 46" CvTextArea="349, 794, 138, 21" CvTextArgument="Download Report" CvType="Button" DesignTimeRectangle="334, 783, 168, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl id='buttonDownload' tag='BUTTON' /&gt;" Guid="2547511e-bc22-4f2f-b04f-e8a6e39c76a9" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="caaf39274f534edbc231af894285c05d.png" xmlns="">0hJtk3bvplU-os5-QrKkg0A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
