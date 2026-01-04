@@ -1,0 +1,14 @@
+﻿{
+  "Name": "&Open",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "TQCHoxlmpU6cWSHIKLc7_w",
+  "Reference": "iToxreOIsECE32DNwzeZzw/TQCHoxlmpU6cWSHIKLc7_w",
+  "ParentRef": "iToxreOIsECE32DNwzeZzw/u703RGoam0ubMNKY_dNO3A",
+  "Created": "2026-01-04T05:24:18.8245341Z",
+  "Updated": "2026-01-04T05:24:18.8245341Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

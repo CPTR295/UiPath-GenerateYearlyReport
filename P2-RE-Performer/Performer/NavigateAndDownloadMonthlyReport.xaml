@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NavigateAndDownloadMonthlyReport" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigateAndDownloadMonthlyReport" this:NavigateAndDownloadMonthlyReport.In_dir="C:\Users\Tushar reddy\OneDrive\Documents\UiPath\Generate-Yearly-Report\P2-RE-Performer\Data\Input\" this:NavigateAndDownloadMonthlyReport.in_Year="2025" this:NavigateAndDownloadMonthlyReport.inTaxID="RO254678" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_dir" Type="InArgument(x:String)" />
     <x:Property Name="in_Year" Type="InArgument(x:String)" />
@@ -47,6 +47,8 @@
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Globalization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,26 +108,26 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NavigateAndDownloadMonthlyReport" sap:VirtualizedContainerService.HintSize="910,2711.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NavigateAndDownloadMonthlyReport" sap:VirtualizedContainerService.HintSize="910,2936.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="652.8,2688" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="1188.8,2884" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="619.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Downlading Monthly Report For &quot;+in_Year]" />
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome ACME System 1 - Download Monthly Repor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="619.2,2430.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V2">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1155.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Downlading Monthly Report For &quot;+in_Year]" />
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome ACME System 1 - Download Monthly Repor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1155.2,2649.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="585.6,2190.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1121.6,2409.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="s:String[]" Name="Months" />
               </Sequence.Variables>
@@ -134,7 +136,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="552,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Text="[inTaxID]" Version="V5">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1088,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Text="[inTaxID]" Version="V5">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="52cb06d2-771a-442c-86a0-b0df4116ba45" ContentHash="_c0Va3MjY0S43bYv4RSt2w" CvElementArea="334, 586, 608, 45" CvType="InputBox" DesignTimeRectangle="334, 588, 607, 42" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="9b045b9f-2f11-42f6-ae2d-5ae83b4910d9" InformativeScreenshot="4653870d413b502ef11c14cd638080c5.png" IsResponsive="True" Reference="iToxreOIsECE32DNwzeZzw/ROn9_2zO30yxdfDqpulS8w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -155,25 +157,78 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NSelectItem DisplayName="Select Item '---'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="552,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_Year]" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
-                <uix:NSelectItem.Items>
-                  <scg:List x:TypeArguments="x:String" Capacity="3">
-                    <x:String>---</x:String>
-                    <x:String>2026</x:String>
-                    <x:String>2025</x:String>
-                  </scg:List>
-                </uix:NSelectItem.Items>
-                <uix:NSelectItem.Target>
-                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="022351fe-a6e1-46a2-a746-127cf6aceb66" ContentHash="Khj-Soiwz0GgvRyWpfRFsw" CvElementArea="333, 720, 279, 45" CvType="InputBox" DesignTimeRectangle="334, 722, 275, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-role='button' type='button' tag='BUTTON' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='---' /&gt;" Guid="5493c15e-9aef-4d74-8543-f75b8674270c" InformativeScreenshot="48389ca92af43f655409af8864942fd0.png" Reference="iToxreOIsECE32DNwzeZzw/Y8qLd5Xs1U-N5om67PDUUw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2026'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1088,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="5551b45c-42de-4d53-82d0-efb85b45354d" ContentHash="H6XhcNypAUqU5H4QHQ0qtA" CvElementArea="333, 764, 279, 45" CvType="InputBox" DesignTimeRectangle="334, 766, 275, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-role='button' type='button' tag='BUTTON' class='btn dropdown-toggle btn-default bs-placeholder' aaname='---' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='---' /&gt;" Guid="6e932495-d888-4b36-9947-554dec553846" InformativeScreenshot="42bd3ef543aba81e63f8bebe7f69aac2.png" Reference="iToxreOIsECE32DNwzeZzw/X1INnLTbvkiFa7l3kWfWeQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
                       <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target CVScreenId="022351fe-a6e1-46a2-a746-127cf6aceb66" CvTextArea="332, 694, 45, 16" CvTextArgument="Year:" CvType="Text" DesignTimeRectangle="334, 691, 43, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Year:' /&gt;" Guid="03914470-4554-4f54-9f72-a0f78a93ffb5" SearchSteps="FuzzySelector, CV" />
+                        <uix:Target CVScreenId="5551b45c-42de-4d53-82d0-efb85b45354d" CvTextArea="332, 737, 43, 16" CvTextArgument="Year:" CvType="Text" DesignTimeRectangle="334, 735, 43, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Year:' /&gt;" Guid="5a78bb77-018a-4217-a2d6-97a1c620bc6d" SearchSteps="FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
                   </uix:TargetAnchorable>
-                </uix:NSelectItem.Target>
-              </uix:NSelectItem>
-              <Assign sap:VirtualizedContainerService.HintSize="552,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2026(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1088,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="e5ac0b3d-18b0-488f-aaeb-8abdbfd2f2b8" ContentHash="eg5mO90sxUSo1cNTZKeAWw" CvTextArea="359, 856, 41, 16" CvTextArgument="[in_Year]" CvType="Text" DesignTimeRectangle="336, 850, 273, 33" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' aria-role='option' tag='A' /&gt;&quot;, in_Year)]" Guid="a9f3ad04-8251-4f62-891f-8f0fcbadcc24" InformativeScreenshot="f107f54b5c079300bf5c4c344863df33.png" Reference="iToxreOIsECE32DNwzeZzw/GG_Zp6F_8Eq-PrJGhNWEzg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1088,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,240.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSelectItem DisplayName="Select Item '---'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="2015" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="3">
+                          <x:String>---</x:String>
+                          <x:String>2026</x:String>
+                          <x:String>2025</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="efe336de-877c-4bb9-9d8e-0de822d89643" ContentHash="a_7fIE8QL0WBK5-coCuZfg" CvElementArea="333, 764, 278, 44" CvType="InputBox" DesignTimeRectangle="334, 766, 275, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='2025' aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle btn-default' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='2026' /&gt;" Guid="513819e9-8e53-4c72-b043-4b15d7f318d2" InformativeScreenshot="196503e4014a20d3f53fffaa6c717e8a.png" Reference="iToxreOIsECE32DNwzeZzw/Y8qLd5Xs1U-N5om67PDUUw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="efe336de-877c-4bb9-9d8e-0de822d89643" CvTextArea="332, 737, 43, 16" CvTextArgument="Year:" CvType="Text" DesignTimeRectangle="334, 735, 43, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Year:' /&gt;" Guid="21b86625-b201-4462-9fda-432b4456463e" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <Assign sap:VirtualizedContainerService.HintSize="1088,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[Months]</OutArgument>
                 </Assign.To>
@@ -181,53 +236,106 @@
                   <InArgument x:TypeArguments="s:String[]">[System.Globalization.DateTimeFormatInfo.CurrentInfo.MonthNames]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="552,1538.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Months]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="1088,1439.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Months]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="550.4,1415.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1086.4,1316" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap:VirtualizedContainerService.HintSize="516.8,1355.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence sap:VirtualizedContainerService.HintSize="1052.8,1256" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'October'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="483.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[currentText]" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="13">
-                              <x:String>---</x:String>
-                              <x:String>January</x:String>
-                              <x:String>February</x:String>
-                              <x:String>March</x:String>
-                              <x:String>April</x:String>
-                              <x:String>May</x:String>
-                              <x:String>June</x:String>
-                              <x:String>July</x:String>
-                              <x:String>August</x:String>
-                              <x:String>September</x:String>
-                              <x:String>October</x:String>
-                              <x:String>November</x:String>
-                              <x:String>December</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="a5ab0abb-66fd-410b-bf67-070e2420d276" ContentHash="sXatOkJHtUKV6M83GbDllQ" CvElementArea="333, 635, 278, 45" CvType="InputBox" DesignTimeRectangle="334, 637, 275, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle btn-default' aaname='October' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='October' /&gt;" Guid="2c44f4df-ac90-473f-ac3e-7b34c79812a9" InformativeScreenshot="eafb62a91a05a0e1f5117cb3f2808d05.png" Reference="iToxreOIsECE32DNwzeZzw/nMFgo39AIUCag-Y2vzfdIg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button 'March''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1019.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="dd25ea40-78e5-454d-9181-fd55459b1c86" ContentHash="2GTrRl72SEuqCTsMroQyfw" CvElementArea="332, 679, 279, 45" CvType="InputBox" DesignTimeRectangle="334, 680, 275, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle btn-default' aaname='*' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='March' /&gt;" Guid="be3f082f-2a26-4de7-aa9b-36930016e743" InformativeScreenshot="435bb08174eef172cc001d4cdfc9cc9c.png" Reference="iToxreOIsECE32DNwzeZzw/QI_H5V5Bu0GwhFYuD-x14A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
                                 <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="a5ab0abb-66fd-410b-bf67-070e2420d276" CvTextArea="332, 607, 60, 16" CvTextArgument="Month:" CvType="Text" DesignTimeRectangle="334, 605, 59, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Month:' /&gt;" Guid="a385f12e-c5de-4933-b16f-1e51241e9a36" SearchSteps="FuzzySelector, CV" />
+                                  <uix:Target CVScreenId="dd25ea40-78e5-454d-9181-fd55459b1c86" CvTextArea="332, 651, 60, 16" CvTextArgument="Month:" CvType="Text" DesignTimeRectangle="334, 649, 59, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Month:' /&gt;" Guid="f54a82f7-6edb-40df-ac8f-295292ad0c5c" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                        </uix:NSelectItem>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Report'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="483.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'January'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1019.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="826da539-9956-4ff3-9326-84a6f840034e" ContentHash="zdzoYdNinkKezh9MyzZWtw" CvTextArea="359, 289, 65, 18" CvTextArgument="[CurrentText]" CvType="Text" DesignTimeRectangle="336, 281, 273, 32" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' aria-role='option' tag='A' /&gt;&quot;, currentText)]" Guid="ecca7f02-739e-45b5-92c6-9af906f3be6f" InformativeScreenshot="3ffb7b19fba5e673dba4dd8d013770db.png" Reference="iToxreOIsECE32DNwzeZzw/6oECX0QEF0ysjr1IWk9ETA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1019.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,240.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NSelectItem DisplayName="Select Item 'October'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[currentText]" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                                <uix:NSelectItem.Items>
+                                  <scg:List x:TypeArguments="x:String" Capacity="13">
+                                    <x:String>---</x:String>
+                                    <x:String>January</x:String>
+                                    <x:String>February</x:String>
+                                    <x:String>March</x:String>
+                                    <x:String>April</x:String>
+                                    <x:String>May</x:String>
+                                    <x:String>June</x:String>
+                                    <x:String>July</x:String>
+                                    <x:String>August</x:String>
+                                    <x:String>September</x:String>
+                                    <x:String>October</x:String>
+                                    <x:String>November</x:String>
+                                    <x:String>December</x:String>
+                                  </scg:List>
+                                </uix:NSelectItem.Items>
+                                <uix:NSelectItem.Target>
+                                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="a5ab0abb-66fd-410b-bf67-070e2420d276" ContentHash="sXatOkJHtUKV6M83GbDllQ" CvElementArea="333, 635, 278, 45" CvType="InputBox" DesignTimeRectangle="334, 637, 275, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle btn-default' aaname='October' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='October' /&gt;" Guid="2c44f4df-ac90-473f-ac3e-7b34c79812a9" InformativeScreenshot="eafb62a91a05a0e1f5117cb3f2808d05.png" Reference="iToxreOIsECE32DNwzeZzw/nMFgo39AIUCag-Y2vzfdIg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="a5ab0abb-66fd-410b-bf67-070e2420d276" CvTextArea="332, 607, 60, 16" CvTextArgument="Month:" CvType="Text" DesignTimeRectangle="334, 605, 59, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Month:' /&gt;" Guid="a385f12e-c5de-4933-b16f-1e51241e9a36" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NSelectItem.Target>
+                              </uix:NSelectItem>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Report'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1019.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="a5ab0abb-66fd-410b-bf67-070e2420d276" ContentHash="a6dqo2lXl0SQzA3Dy3VoIQ" CvElementArea="332, 780, 171, 46" CvTextArea="349, 794, 138, 21" CvTextArgument="Download Report" CvType="Button" DesignTimeRectangle="334, 783, 168, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl id='buttonDownload' tag='BUTTON' /&gt;" Guid="2547511e-bc22-4f2f-b04f-e8a6e39c76a9" InformativeScreenshot="caaf39274f534edbc231af894285c05d.png" Reference="iToxreOIsECE32DNwzeZzw/KP0xhvs86k6aH80MgQEAEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                           </uix:NClick.Target>
@@ -242,42 +350,24 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Save As" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,856.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="282e62a6-e5e0-41d3-9c5c-efac1c8d4724" Version="V2">
-                          <uix:NApplicationCard.Body>
-                            <ActivityAction x:TypeArguments="x:Object">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,566.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <uix:NCheckState DisplayName="Check App State 'acme-test.uipath.com sa…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1019.2,439.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="483.2,111.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="282e62a6-e5e0-41d3-9c5c-efac1c8d4724" Text="[&quot;Report&quot;+&quot;-&quot;+inTaxID+&quot;-&quot;+currentText]" Version="V5">
-                                  <uix:NTypeInto.Target>
-                                    <uix:TargetAnchorable CVScreenId="92ccc9de-b5e7-4520-a2b3-8d981c82ea69" ContentHash="GImi0eEBDEaHjUuCd_-GsA" CvElementArea="158, 790, 1509, 29" CvType="InputBox" DesignTimeRectangle="169, 795, 1477, 22" ElementType="InputBox" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="ae268ab9-2ea0-4bb1-abd3-8d1f94699d12" InformativeScreenshot="29f40c29650e0c9d4169fb43344626d9.png" IsResponsive="True" Reference="iToxreOIsECE32DNwzeZzw/9qOta3WmoUyeQOK_gaK0lg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CVScreenId="92ccc9de-b5e7-4520-a2b3-8d981c82ea69" CvTextArea="91, 797, 69, 15" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="22, 792, 144, 28" ElementType="Text" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;ctrl name='Explorer Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Details Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='File name:' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='File name:' /&gt;" Guid="ee6865a0-0b7f-4975-a92b-aaa8de672e15" SearchSteps="FuzzySelector, CV" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NTypeInto.Target>
-                                  <uix:NTypeInto.VerifyOptions>
-                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                    </uix:VerifyExecutionTypeIntoOptions>
-                                  </uix:NTypeInto.VerifyOptions>
-                                </uix:NTypeInto>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="282e62a6-e5e0-41d3-9c5c-efac1c8d4724" Version="V5">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="205b63f9-ceff-4ff7-987e-397e304b2d33" Version="V5">
                                   <uix:NClick.Target>
-                                    <uix:TargetAnchorable CVScreenId="460144b4-cf1e-4b5c-b04d-e6245242caad" ContentHash="NAPeW-HaiE6M9W_ABWZ7dQ" CvElementArea="1420, 882, 110, 33" CvTextArea="1458, 891, 33, 13" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="1421, 883, 110, 33" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="abcb3bdc-94d0-45dd-9476-9461b1a23445" InformativeScreenshot="946a126c3fd85183544dd0156544527d.png" Reference="iToxreOIsECE32DNwzeZzw/BCBywV7h502WqwRL1LnU0w" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="e77a7dde-8f69-413d-924a-c6ba941b8919" ContentHash="44wGC_Rth0SYVS__VTOc_g" CvElementArea="1136, 240, 95, 63" CvTextArea="1170, 264, 26, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1144, 248, 80, 49" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" Guid="6f23b948-cc26-4fe2-bc25-e92c049a6818" InformativeScreenshot="0930a80eeb4c59f3b2868e4c7e84644b.png" Reference="iToxreOIsECE32DNwzeZzw/ms23lPfqVEaPdM_UseT9vg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                                   </uix:NClick.Target>
                                   <uix:NClick.VerifyOptions>
                                     <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -290,13 +380,92 @@
                                     </uix:VerifyExecutionOptions>
                                   </uix:NClick.VerifyOptions>
                                 </uix:NClick>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;No Report Found&quot;]" />
                               </Sequence>
-                            </ActivityAction>
-                          </uix:NApplicationCard.Body>
-                          <uix:NApplicationCard.TargetApp>
-                            <uix:TargetApp Area="235, 86, 1685, 940" ContentHash="KiH0Hqzw5kaUn7D-M5HpCA" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATkSURBVDhPZdR7TFNXHAfwu2xQra9tvhkUGM8ipb1gBkJfgghCHT6Jy2RmJupfxmUhZoKAzk0SjaAICrSARGYMW1S2RUARkafANtDNJk5RKW0BaXuZywbcu/N1p6Wim7/kk99Jc37fk3vbHub/FSSeJX6kZJXDmsgsqnFYy44MayMxoo0kVk3kAFVv1bA5vytlkkCxyMM99nrt8lksqmODFc1R0kMWDdtPw0yUgw5PUqBoIDtBcZTJpFL0NEWG5l1RBCmcs+6Y6drlvdizcWWIbkjD6unme5RAQ2HRKIhFTalcHRaVnK7lxOyklPPUvUFlhL4hMljnzHDHMUwdG6QwqeV6OvjUNaxSwOwin6Z0BcAcF0Gchl5hipU9HYyL0F9RBCpcYSKvuR6XYqV5jzVyI90A90aY1SzMySpYNq/DUPp6WLalwZqeRKxb4oh1Iz10YwSxbJARK0W78cbaoLwQX9FsRlaZKjm+V93TlRolmNyB9FSYU7VwFOSD6/0J5gcWcKN/YGK4m/DGI4RvTyBTLQoXvkVOpm7K+YlmeZ/tengco/hmQ86WgmRTTcYqPFTJYKKPZ0pRY6jyHK5+b0RuzSh2lnLYZXiGrIsj+LHzNzgeVhOhV0v4LgUROmUvDPId4QcY+fm0hugKHXcwU4ObqSxMiTEYy89Dbe1d7K0aR3w+h8gch4v6aw77zo+jofse/hk4CqF7FYSOMCcidEgdfIe0gYmo/vCRrHr935uOJZLinTF4sCkR9s4u7Cu3IuZLDoqDDje7i/Yoh5zaEfw11gu+Jx5Cewj49hD6GoInqREmvEr3fEVVCmH1KWRPlgatn6aRQTOHjLJxyLJtiMi2vyajzA7rqBkTPWsgtAWCbwuYwYRXpj4Pq0ghYYYUknAiEblHt5EHD63YfsaO8CwbRTsNmenUDnrY+DMOU73OQH8a5DeDCTOsG5XqkydDDclEfjYJmyq3k9uP72DfhVHEfWWH9IBtRhj1wWE7MmssmLK10XcYC6FVQvlQ3hN8q/cAIy1PbgwtT3KElCcRCtHVm3GkvRhFLfex55wDKw/bEPrFmEvsERt208++a+2HcD/T9YXwt7wguCzn6LqeCS1dmxVcmmiiEFy6FtKyZMRUb0VhVy2OXzdid7UVH9OfzdYSG/ZeGIHhlhF3f60A37ECfIsXtRT8zSUQWpaahJZlB5mgQq0ysDihP7BkjRB4Zg2h3QnRVVuQ3VxAWh//Qoa4Z6TPPIy2J3fwbe8xXL66ioYseql5oTDZtKh7/IfFPoznUrHYJzv6UEBJvDGgJIG4FCcguCQRrD6NKM99ROLP7yCa6k+gq0lH4aVYDFx7jwa9O635HSdjX8WC3FCfN99y/Z+9Po9S+Bdp9f6nVz+lyPtFq+HkX7SaTNM6OzIqo1B32Q9/Nr0N/sb8F8aE5gX622fmTl8Ozpqv9fb02r9S53dSq/c7pTXSLlCgaxf/kxoSdlqF0xcDMVC/kIbMpeYIlJG/Mc/QZ5ijy0z3fHl9OWu+1ke07DOWXb4/6pDkhLrHt0Bj8i3UcJJC9UTASRXRlUWhvW7J1FTTbI5vmm2auDar/2f9rMOdJXPYzHTRfy/YV8tjidhDkq+U+BVqc2lgg6RAPRB+KhblF33xpH7eKN8kauSvi7LsdSJliM8bYveYuxjmXxHjXHQDHpSiAAAAAElFTkSuQmCC" InformativeScreenshot="7133c6fd8d9451c0a458d2544c9051ad.png" Reference="iToxreOIsECE32DNwzeZzw/KprpgqHl3ECzO3R58jJjJQ" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" Version="V2" />
-                          </uix:NApplicationCard.TargetApp>
-                        </uix:NApplicationCard>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="483.2,197.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence sap:VirtualizedContainerService.HintSize="449.6,136" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Save As" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.20000000000005,1009.5999999999999" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="282e62a6-e5e0-41d3-9c5c-efac1c8d4724" Version="V2">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,742.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="282e62a6-e5e0-41d3-9c5c-efac1c8d4724" Text="[In_dir+&quot;Report&quot;+&quot;-&quot;+inTaxID+&quot;-&quot;+currentText]" Version="V5">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable CVScreenId="92ccc9de-b5e7-4520-a2b3-8d981c82ea69" ContentHash="GImi0eEBDEaHjUuCd_-GsA" CvElementArea="158, 790, 1509, 29" CvType="InputBox" DesignTimeRectangle="169, 795, 1477, 22" ElementType="InputBox" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="ae268ab9-2ea0-4bb1-abd3-8d1f94699d12" InformativeScreenshot="29f40c29650e0c9d4169fb43344626d9.png" IsResponsive="True" Reference="iToxreOIsECE32DNwzeZzw/9qOta3WmoUyeQOK_gaK0lg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target CVScreenId="92ccc9de-b5e7-4520-a2b3-8d981c82ea69" CvTextArea="91, 797, 69, 15" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="22, 792, 144, 28" ElementType="Text" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;ctrl name='Explorer Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Details Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='File name:' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='File name:' /&gt;" Guid="ee6865a0-0b7f-4975-a92b-aaa8de672e15" SearchSteps="FuzzySelector, CV" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NTypeInto.Target>
+                                          <uix:NTypeInto.VerifyOptions>
+                                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            </uix:VerifyExecutionTypeIntoOptions>
+                                          </uix:NTypeInto.VerifyOptions>
+                                        </uix:NTypeInto>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="282e62a6-e5e0-41d3-9c5c-efac1c8d4724" Version="V5">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable CVScreenId="460144b4-cf1e-4b5c-b04d-e6245242caad" ContentHash="NAPeW-HaiE6M9W_ABWZ7dQ" CvElementArea="1420, 882, 110, 33" CvTextArea="1458, 891, 33, 13" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="1421, 883, 110, 33" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="abcb3bdc-94d0-45dd-9476-9461b1a23445" InformativeScreenshot="946a126c3fd85183544dd0156544527d.png" Reference="iToxreOIsECE32DNwzeZzw/BCBywV7h502WqwRL1LnU0w" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                                          </uix:NClick.Target>
+                                          <uix:NClick.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NClick.VerifyOptions>
+                                        </uix:NClick>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Report Downloaded&quot;]" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp Area="235, 86, 1685, 940" ContentHash="KiH0Hqzw5kaUn7D-M5HpCA" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATkSURBVDhPZdR7TFNXHAfwu2xQra9tvhkUGM8ipb1gBkJfgghCHT6Jy2RmJupfxmUhZoKAzk0SjaAICrSARGYMW1S2RUARkafANtDNJk5RKW0BaXuZywbcu/N1p6Wim7/kk99Jc37fk3vbHub/FSSeJX6kZJXDmsgsqnFYy44MayMxoo0kVk3kAFVv1bA5vytlkkCxyMM99nrt8lksqmODFc1R0kMWDdtPw0yUgw5PUqBoIDtBcZTJpFL0NEWG5l1RBCmcs+6Y6drlvdizcWWIbkjD6unme5RAQ2HRKIhFTalcHRaVnK7lxOyklPPUvUFlhL4hMljnzHDHMUwdG6QwqeV6OvjUNaxSwOwin6Z0BcAcF0Gchl5hipU9HYyL0F9RBCpcYSKvuR6XYqV5jzVyI90A90aY1SzMySpYNq/DUPp6WLalwZqeRKxb4oh1Iz10YwSxbJARK0W78cbaoLwQX9FsRlaZKjm+V93TlRolmNyB9FSYU7VwFOSD6/0J5gcWcKN/YGK4m/DGI4RvTyBTLQoXvkVOpm7K+YlmeZ/tengco/hmQ86WgmRTTcYqPFTJYKKPZ0pRY6jyHK5+b0RuzSh2lnLYZXiGrIsj+LHzNzgeVhOhV0v4LgUROmUvDPId4QcY+fm0hugKHXcwU4ObqSxMiTEYy89Dbe1d7K0aR3w+h8gch4v6aw77zo+jofse/hk4CqF7FYSOMCcidEgdfIe0gYmo/vCRrHr935uOJZLinTF4sCkR9s4u7Cu3IuZLDoqDDje7i/Yoh5zaEfw11gu+Jx5Cewj49hD6GoInqREmvEr3fEVVCmH1KWRPlgatn6aRQTOHjLJxyLJtiMi2vyajzA7rqBkTPWsgtAWCbwuYwYRXpj4Pq0ghYYYUknAiEblHt5EHD63YfsaO8CwbRTsNmenUDnrY+DMOU73OQH8a5DeDCTOsG5XqkydDDclEfjYJmyq3k9uP72DfhVHEfWWH9IBtRhj1wWE7MmssmLK10XcYC6FVQvlQ3hN8q/cAIy1PbgwtT3KElCcRCtHVm3GkvRhFLfex55wDKw/bEPrFmEvsERt208++a+2HcD/T9YXwt7wguCzn6LqeCS1dmxVcmmiiEFy6FtKyZMRUb0VhVy2OXzdid7UVH9OfzdYSG/ZeGIHhlhF3f60A37ECfIsXtRT8zSUQWpaahJZlB5mgQq0ysDihP7BkjRB4Zg2h3QnRVVuQ3VxAWh//Qoa4Z6TPPIy2J3fwbe8xXL66ioYseql5oTDZtKh7/IfFPoznUrHYJzv6UEBJvDGgJIG4FCcguCQRrD6NKM99ROLP7yCa6k+gq0lH4aVYDFx7jwa9O635HSdjX8WC3FCfN99y/Z+9Po9S+Bdp9f6nVz+lyPtFq+HkX7SaTNM6OzIqo1B32Q9/Nr0N/sb8F8aE5gX622fmTl8Ozpqv9fb02r9S53dSq/c7pTXSLlCgaxf/kxoSdlqF0xcDMVC/kIbMpeYIlJG/Mc/QZ5ijy0z3fHl9OWu+1ke07DOWXb4/6pDkhLrHt0Bj8i3UcJJC9UTASRXRlUWhvW7J1FTTbI5vmm2auDar/2f9rMOdJXPYzHTRfy/YV8tjidhDkq+U+BVqc2lgg6RAPRB+KhblF33xpH7eKN8kauSvi7LsdSJliM8bYveYuxjmXxHjXHQDHpSiAAAAAElFTkSuQmCC" InformativeScreenshot="7133c6fd8d9451c0a458d2544c9051ad.png" Reference="iToxreOIsECE32DNwzeZzw/KprpgqHl3ECzO3R58jJjJQ" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" Version="V2" />
+                                  </uix:NApplicationCard.TargetApp>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NApplicationCard>
+                              </Sequence>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="e77a7dde-8f69-413d-924a-c6ba941b8919" ContentHash="1owZwYr7-kqllcV5rK61pA" CvTextArea="711, 144, 243, 23" CvTextArgument="acme-test.uipath.com says" CvType="Text" DesignTimeRectangle="711, 144, 243, 23" ElementType="Text" Guid="538315dc-9988-4ced-96f6-feb8fba012c6" InformativeScreenshot="e5f7b7e88593bc2d9da98c4d0d6d3d32.png" Reference="iToxreOIsECE32DNwzeZzw/75dKwqIg-0upTm4UoEUgrA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                          </uix:NCheckState.Target>
+                        </uix:NCheckState>
                       </Sequence>
                     </Sequence>
                   </ActivityAction>

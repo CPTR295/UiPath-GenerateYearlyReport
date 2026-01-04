@@ -1,0 +1,14 @@
+﻿{
+  "Name": "acme-test.uipath.com sa…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "du0RuIpKG0-4ymC1fiUq2w",
+  "Reference": "iToxreOIsECE32DNwzeZzw/du0RuIpKG0-4ymC1fiUq2w",
+  "ParentRef": "iToxreOIsECE32DNwzeZzw/bmiaCZ-xbkq8sDSlQvyELA",
+  "Created": "2026-01-04T05:35:29.7935648Z",
+  "Updated": "2026-01-04T05:35:29.7935648Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

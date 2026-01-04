@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome ACME System 1 - Upload Yearly Report",
+  "Type": "Screen",
+  "Id": "wUomsoLgn0uZlAbca2ASGw",
+  "Reference": "iToxreOIsECE32DNwzeZzw/wUomsoLgn0uZlAbca2ASGw",
+  "ParentRef": "iToxreOIsECE32DNwzeZzw/dpVYR0_YzEKPr2YmddfFhg",
+  "Created": "2026-01-04T05:17:08.8042232Z",
+  "Updated": "2026-01-04T05:17:08.8042232Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

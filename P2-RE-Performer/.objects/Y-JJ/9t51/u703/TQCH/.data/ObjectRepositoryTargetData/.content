@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="f_rT9csPbky9RIaA7p1pTw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="89e95e72-2457-4928-9070-fe3845821c63" CvElementArea="1419, 881, 111, 34" CvTextArea="1455, 890, 38, 18" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="1421, 883, 110, 33" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" Guid="b3367c1b-9b67-4ede-8599-d9810b1bb6cb" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d53ed24afd8b5bd2fb7bd27dbc39f761.png" xmlns="">0wg9po8dbnU2u3_THnQeB0A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

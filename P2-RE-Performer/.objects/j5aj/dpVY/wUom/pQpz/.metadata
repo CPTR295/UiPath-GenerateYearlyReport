@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Report was uploaded - c…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "pQpzPTwDZESL21mV2oBLBQ",
+  "Reference": "iToxreOIsECE32DNwzeZzw/pQpzPTwDZESL21mV2oBLBQ",
+  "ParentRef": "iToxreOIsECE32DNwzeZzw/wUomsoLgn0uZlAbca2ASGw",
+  "Created": "2026-01-04T05:27:53.1881163Z",
+  "Updated": "2026-01-04T05:27:53.1881163Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
